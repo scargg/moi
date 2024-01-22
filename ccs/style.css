@@ -157,7 +157,6 @@ nav a {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   align-items: center;
-  height: 95%;
 }
 
 /*Footer*/
@@ -258,13 +257,22 @@ button:hover {
   }
   .trending-container {
     flex-direction: column;
+    width: 100%;
   }
   .trending-images {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px , 150px));
     text-align: center;
-    align-items: center;
+    gap: 20px 20px;
+    justify-content: center;
+
+  }
+  .trending-item {
+    display: grid;
+    gap: 20px;
+    grid-template-rows: auto 100px 50px;
     justify-items: center;
+    padding: 20px 20px;
   }
   footer {
     margin: 0;
