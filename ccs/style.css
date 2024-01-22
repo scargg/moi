@@ -149,10 +149,11 @@ nav a {
 }
 
 .trending-item {
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  gap: 10px;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: auto 100px 50px;
+  justify-items: center;
+  padding: 20px 20px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -261,11 +262,10 @@ button:hover {
   }
   .trending-images {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px , 150px));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
     text-align: center;
     gap: 20px 20px;
     justify-content: center;
-
   }
   .trending-item {
     display: grid;
