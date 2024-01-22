@@ -1,0 +1,379 @@
+/*Color palet
+#6096B4 Azul
+#93BFCF Celeste
+#BDCDD6 Gris
+#EEE9DA Beige*/
+
+/*Font*/
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+/*font-family: 'Kanit', sans-serif;*/
+
+/*Fuente aplicada a los html*/
+header {
+  font-family: "Kanit", sans-serif;
+  text-shadow: -2px -1px 7px rgb(19, 1, 1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
+  background-color: #eee9da;
+}
+
+/*Header*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #6096b4;
+  margin: 0;
+}
+
+header img {
+  max-height: 115px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: #eee9da;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.mobile-dropdown {
+  display: none;
+}
+
+/*Main - Index*/
+
+/*Banner*/
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 25px;
+}
+.banner-nike {
+  height: 80px;
+  background-color: #eee9da;
+  background-image: url(../images/swoosh.png);
+  background-size: contain;
+}
+
+/*Main - presentation*/
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 55px;
+}
+
+.presentation h2 {
+  margin-bottom: 20px;
+}
+
+.presentation > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+.presentation > div > * {
+  margin: 0 10px;
+}
+
+.presentation img {
+  max-width: 100%;
+  height: auto;
+  width: 100px;
+}
+
+/*Main - trending topic*/
+.trending {
+  display: grid;
+  justify-items: center;
+}
+
+.trending-container {
+  display: flex;
+  gap: 20px;
+}
+
+.trending-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.trending h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.trending h3 {
+  text-align: center;
+}
+
+.trending div {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.trending-block img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.trending-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.trending-item {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  height: 95%;
+}
+
+/*Footer*/
+footer img {
+  width: 50px;
+  padding: 0 3px;
+}
+
+footer {
+  margin: 0;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #bdcdd6;
+  color: black;
+  padding: 20px;
+}
+.description {
+  max-width: 50%;
+}
+
+.description p {
+  text-align: justify;
+}
+
+.linksfooter {
+  font-weight: bold;
+}
+
+/*Product grids*/
+
+.product-grid {
+  padding: 10px 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 90vw;
+}
+
+.grid-item {
+  grid-template-rows: 3fr 1fr 2fr 1fr;
+  display: grid;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  max-height: 410px;
+}
+
+.imgcontent {
+  width: 200px;
+}
+
+.imgcontent img {
+  object-fit: cover;
+}
+
+.imgcontent img:hover {
+  object-fit: contain;
+}
+
+.item-image {
+  width: 100%;
+  height: 250px;
+}
+
+.item-title {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  background-color: #6096b4;
+  color: #eee9da;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+button:hover {
+  background-color: #bdcdd6;
+}
+
+/*MediaQ*/
+@media only screen and (max-width: 975px) {
+  .desktop-nav {
+    display: none;
+  }
+  .trending-container {
+    flex-direction: column;
+  }
+  .trending-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+  }
+  footer {
+    margin: 0;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bdcdd6;
+    color: black;
+    padding: 20px;
+  }
+
+  .description {
+    display: none;
+  }
+
+  header {
+    background-color: #6096b4;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    color: #eee9da;
+    font-size: 24px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+
+  nav li {
+    margin-right: 20px;
+    position: relative;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #eee9da;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #bdcdd6;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Dropdown Menu Styles */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #6096b4;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: #eee9da;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #bdcdd6;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .mobile-dropdown {
+    display: block;
+  }
+}
+
+/* Dropdown Menu Mobile */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #6096b4;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #eee9da;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #bdcdd6;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
